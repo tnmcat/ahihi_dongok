@@ -1,0 +1,53 @@
+.bg-dark {
+    background-color: #303464 !important;
+    width: 100%;
+
+
+}
+
+.bg-dark>div>video {
+    position:absolute;
+    padding:0;
+    object-fit: cover!important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #182627 !important;
+    border-color: #182627 !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #3b945e !important;
+    border-color: #3b945e !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    color: black;
+    border-color: gray;
+}
+
+.btn.disabled {
+    color: black;
+    border-color: gray;
+}
+
+.col-md-4 {
+    padding-left: 0px;
+}
+.h-100{
+    overflow: hidden;
+}
+
+.card {
+    transition: all .3s ease-in-out;
+    
+
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
