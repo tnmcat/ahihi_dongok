@@ -12,8 +12,8 @@ Alpine Ascent
        
 ===========================
 
-Documentations: https://tnmcat.github.io/alpineascent_group2/
+Documentations: https://github.com/tnmcat/alpineascent_group2/tree/main/Documentations
 
 ===========================
 
-Public website:
+Public website: https://tnmcat.github.io/alpineascent_group2/
