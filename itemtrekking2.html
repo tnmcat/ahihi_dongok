@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./homepage.css">
+    <link rel="stylesheet" href="./trekk.css">
+    <link rel="stylesheet" href="/popup/popup.css">
+    <link rel="stylesheet" href="./item.css">
+
+    <title>Bolivia’s Cordillera Trek Overview</title>
+</head>
+
+<body>
+    <!-- Form Register-->
+    <div id="modal-regards" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Thank You For Chosing Us</h3>
+                <button type="button" data-modal="#modal-regards" class="modal-close">
+                    &times;
+                </button>
+            </div>
+            <!-- form ghi nhận thông tin -->
+            <div class="modal-body">
+                <form class="row g-3 was-validated ">
+                    <!-- First Name -->
+                    <div class="col-md-4">
+                        <label for="validationTextarea" class="form-label">First Name </label>
+                        <input class="form-control" id="validationTextarea" placeholder="Required First Name"
+                            required></input>
+                        <div class="invalid-feedback">
+                            Please enter First Name !
+                        </div>
+                    </div>
+                    <!-- Last Name -->
+                    <div class="col-md-4">
+                        <label for="validationTextarea" class="form-label">Last Name </label>
+                        <input class="form-control" id="validationTextarea" placeholder="Required Last Name"
+                            required></input>
+                        <div class="invalid-feedback">
+                            Please enter Last Name !
+                        </div>
+                    </div>
+                    <!-- Gender -->
+                    <div class="col-md-4">
+                        <label for="validationServer03" class="form-label">Gender</label>
+                        <select class="form-select" required aria-label="select example">
+                            <option value="">Gender</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">I dont want public</option>
+                        </select>
+                        <div class="invalid-feedback">Please select !</div>
+                    </div>
+                    <!-- Email -->
+                    <div class="col-md-8">
+                        <label for="validationTextarea" class="form-label">Email </label>
+                        <input class="form-control" id="validationTextarea" placeholder="Required Email"
+                            required></input>
+                        <div class="invalid-feedback">
+                            Please enter Enmail !
+                        </div>
+                    </div>
+                    <!-- Phone Number -->
+                    <div class="col-md-4">
+                        <label for="validationTextarea" class="form-label">Phone Number </label>
+                        <input class="form-control" id="validationTextarea" placeholder="Required Phone Number"
+                            required></input>
+                        <div class="invalid-feedback">
+                            Please enter Phone Number!
+                        </div>
+                    </div>
+                    <!-- Country -->
+                    <div class="col-md-4">
+                        <label for="validationServer03" class="form-label">Country</label>
+                        <select class="form-select" required aria-label="select example">
+                            <option value="">Country</option>
+                            <option value="1">United Kingdom</option>
+                            <option value="2">America</option>
+                            <option value="3">Viet Nam</option>
+                            <option value="4">India</option>
+                        </select>
+                        <div class="invalid-feedback">Please select your country!</div>
+                    </div>
+                    <!-- City -->
+                    <div class="col-md-4">
+                        <label for="validationTextarea" class="form-label">City / State </label>
+                        <input class="form-control" id="validationTextarea" placeholder="Required City / State"
+                            required></input>
+                        <div class="invalid-feedback">
+                            Please enter City / State !
+                        </div>
+                    </div>
+                    <!-- Address -->
+                    <div class="col-md-4">
+                        <label for="validationTextarea" class="form-label">Adderess</label>
+                        <input class="form-control" id="validationTextarea" placeholder="Required Address"
+                            required></input>
+                        <div class="invalid-feedback">
+                            Please enter Address !
+                        </div>
+                    </div>
+                    <!-- checl final -->
+                    <div class="form-check mb-3 ">
+                        <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+                        <label class="form-check-label" for="validationFormCheck1">Agree to terms and conditions</label>
+                        <div class="invalid-feedback">You must agree before submitting.</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <!-- submitting -->
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Book</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ảnh bìa -->
+    <div class="header" style="background-image: url(./imageshop/trek/cordillera.jpg);height:max-content;">
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a href="./index.html" class="navbar-brand"><img src="./image/logo.png" alt=""></a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="./index.html" class="nav-item nav-link active">Home</a>
+    
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown">
+                                Book A Trip
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./shoptrekk.html">Treking</a></li>
+                                <li><a class="dropdown-item" href="./shopclimbs.html">Climbs</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown">
+                                Shop
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./Socks.html">Footwear</a></li>
+                                <li><a class="dropdown-item" href="./CampKitchen.html">Equipment</a></li>
+                                <li><a class="dropdown-item" href="./HeadWear.html">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <a href="./aboutus.html" class="nav-item nav-link active">About Us</a>
+                    </div>
+                    <div class="navbar-nav ms-auto">
+                    </div>
+                </div>
+            </div>
+            
+        </nav>
+        
+        <!-- Header-->
+        <header class=" py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">BOLIVIA’S CORDILLERA REAL TREK
+                    </h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Together we make big things </p>
+                </div>
+            </div>
+        </header>
+    </div>
+   
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h2>Bolivia’s Cordillera Real Trek Overview</h2>
+                <p>This expedition to Bolivia provides the opportunity to experience the beauty of stark high altitude
+                    landscapes and panoramic views of glaciated peaks along with authentic Andean culture. As tourism
+                    infrastructure in Bolivia is delayed behind that of other neighboring Andean countries, travel here
+                    is well-suited to the adventurous traveler. However, the intrepid visitor to Bolivia will find
+                    endlessly fascinating cultural depth, authenticity and natural beauty.</p>
+            </div>
+            <!--img of trek-->
+            <div class="row g-4 g-lg-5">
+                <div class="col-lg-5">
+                    <div class="about-img content">
+                        <img src="./imageshop/itemtrek/bolivia1.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="about-img content">
+                        <img src="./imageshop/itemtrek/bolivia2.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="about-img content">
+                        <img src="./imageshop/itemtrek/bolivia3.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h3 class="pt-0 pt-lg-5">Basic Information About Trek</h3>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center-1">
+                            <button type="button" data-modal="#modal-regards" class="btn btn-outline-primary "
+                                title="Costs based on 4 Trekkers with Alpine Ascents Guide leading">Register</button>
+                        </div>
+                    </div>
+                    <!-- Tabs -->
+                    <ul class="nav nav-pills mb-3">
+                        <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Overview</a></li>
+                        <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Itinerary
+                            </a></li>
+                        <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Why Trek With Us
+                            </a></li>
+                        <li><a class="nav-link" data-bs-toggle="pill" href="#tab4">GoogleMap of Bolivia
+                            </a></li>
+                    </ul><!-- End Tabs -->
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab1">
+                            <p class="fst-italic">Bolivia’s Cordillera Real (Royal Range) contains 7 peaks over 6000
+                                meters and over 600 peaks over 5000 meters all packed within a range that stretches a
+                                mere 78 miles in length. Despite the immensity of trekking possibilities, Bolivia’s
+                                premier mountain range remains one of South America’s best kept trekking secrets. This
+                                trek itinerary is specially designed to take in a variety of the best scenery along the
+                                length of the range.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="bi bi-check2"></i>
+                                <h4>COVID-19 PROTOCOLS</h4>
+                            </div>
+                            <a href="https://www.alpineascents.com/treks/bhutan/logistics/#covid-19-protocols">
+
+                                <b>Please see here for our current Covid 19 guidelines.</b>
+                            </a>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="bi bi-check2"></i>
+                                <h4>BOLIVIA’S CORDILLERA TREK PRICE</h4>
+                            </div>
+                            <p>$4,500.00.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="bi bi-check2"></i>
+                                <h4>BOLIVIA’S CORDILLERA TREK SCHEDULE</h4>
+                            </div>
+                            <p>2023 Dates TBD.
+
+                            </p>
+
+                        </div><!-- End Tab 1 Content -->
+                        <div class="tab-pane fade show" id="tab2">
+                            <p class="fst-italic">Please note that trekking times, distances, and elevation gains are
+                                approximate. We will be trekking through a remote and wild mountain region and, while we
+                                have established destination points, we will often not be following any kind of
+                                established trekking route or visible trail. Be prepared to walk on varying types of
+                                terrain, including scree. Not being on a well established trekking route is one of the
+                                wonderful aspects of this trip, but it can make our progress more arduous.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="bi bi-check2"></i>
+                                <h4>Day 1 & 2 </h4>
+                            </div>
+                            <p>Depart country of origin. <br>
+                                Arrive<b> La Paz, Bolivia.</b>
+
+                            </p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="bi bi-check2"></i>
+                                <h4>Day 3 to 7</h4>
+                            </div>
+                            <p>
+                                First destination is the small lakeside village of <b>Santiago de Huata</b>. From
+                                Santiago to Huata, we will enjoy views of the shores of
+                                the lake and the enormous <b>Ancohuma</b> massif (21,086 ft / 6427 m) as we drive to the
+                                village of <b>Santiago de Okola</b> . Overnight in rustic accommodations at <b>Santiago
+                                    de Okola</b> (12,600 ft / 3840 m).<br>
+                                <hr>
+                                Hike to the top of the <b>Dragon Dormido</b>, the aptly named rock
+                                formation for which the local community is known. The summit, at 13,435 ft / 4095
+                                meters, affords absolutely spectacular views of the <b>Cordillera Real</b> mountain
+                                range,<b>Lake Titicaca</b>, and the surrounding rural farmland. In the afternoon we will
+                                drive to
+                                <b>Sorata</b>(9,200 ft / 2805 m). Overnight in basic hostal at <b>Sorata</b> (9,200 ft /
+                                2805
+                                m).<br>
+                                <hr>
+                                Begin our trek from the <b>village of Sorata</b> through rural
+                                agricultural slopes and villages to the <b>small hamlet of Lakhatiya</b>. As we gain
+                                elevation,
+                                we pass through several different agricultural zones and gain insight into village life.
+                                Overnight in tents near <b>Lakhatiya</b> (13,450 ft / 4100 m). <br>
+                                Trekking time with breaks: 7 hours aprox. <br>
+                                Distance: Aprox. 6 miles. <br>
+                                Elevation Gain: 4400 ft.<br>
+                                <hr>
+                                Take over <b>Illampu Pass</b> (15,554 ft / 4741 m),
+                                affording spectacular close up views of the sheer slopes of <b>Illampu</b> (20,892 ft /
+                                6368
+                                m). We will make a long curving descent with views towards the lower pre-cloud forest
+                                slopes to the northeast and will camp near the remote mostly abandoned llama herder
+                                <b>village of Utjaña Pampa</b>. As we approach our campsite, one of the <b>Cordillera
+                                    Real’s</b> most
+                                difficult to access major peaks, <b>Pico del Norte</b> (19,915 ft / 6070 m), soars over
+                                7000
+                                feet above us. Overnight in tents near <b>Utjaña Pampa village</b> (12,800 ft / 3900 m).
+                                <br>
+                                Trekking time with breaks: 7 hrs aprox. <br>
+                                Distance: 7 miles. <br>
+                                Elevation Gain: 2100 ft.<br>
+                                <hr>
+                                Trek up and over the <b>Karwasani Pass</b> (14,900 ft / 4542 m), from which we will
+                                have views over the greener slopes of the comparatively lower elevation mining
+                                <b>village
+                                    of Cocoyo</b>. We will be trekking completely on the <b>Amazon side of the
+                                    Cordillera Real</b> and
+                                warmer air often creeps up forming clouds and fog over the valleys here. We will proceed
+                                through the village to the <b>Sarani Valley</b> . Overnight in tents in the <b>Sarani
+                                    Valley</b>
+                                (11,880 ft / 3620 m). <br>
+
+                                Trekking time with breaks: 5-6 hrs. <br>
+
+                                Distance: 6.5 miles.<br>
+
+                                Elevation Gain: 2300 ft.<br>
+
+                            </p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="bi bi-check2"></i>
+                                <h4>Day 8 to 13</h4>
+                            </div>
+                            <p>
+                                Cimb up the <b>Sarani Valley</b>, following a pristine river, and passing alongside
+                                mostly abandoned stone houses belonging to <b>Aymara llama</b> herders up to the
+                                <b>Sarani Pass</b>
+                                (14,900 ft / 4542 m). We will arrive at the small <b>village of Chajolpaya</b> and camp
+                                alongside the river above the village. Overnight in tents in the <b>Chajolpaya
+                                    valley</b>
+                                (13,400 ft / 4080 m). <br>
+                                Trekking time with breaks: 6 hrs. <br>
+                                Distance: 6.5 miles. <br>
+                                Elevation Gain: 3020 ft.<br>
+                                <hr>
+                                From <b>Chajolpaya</b> through the <b>Calzada Pass</b>
+                                (16,550 ft / 5044 m) to the altiplano (high plateau) side of the <b>Cordillera
+                                    Real</b>. From <b>Chojña Khota Lagoon</b> (15,600 ft / 4755 m), we will begin our
+                                trek in a
+                                southeasterly direction and over the course of the next several days will follow the
+                                mountain range through one of the most spectacular sections of glaciated peaks. Today’s
+                                trek will take us over a ridge around 16732 ft / 5100 m with spectacular views and down
+                                to <b>Jistaña Khota Lagoon</b> on the other side. Overnight in tents below <b>Jistaña
+                                    Khota Lagoon</b>
+
+                                (14,990 ft / 4570 m). <br>
+
+                                Trekking time with breaks: 4 hrs. <br>
+
+                                Distance: 3.5 miles. <br>
+
+                                Elevation Gain: 1,100 ft.<br>
+                                <hr>
+                                Traver the lower ridges of <b>Chearoco</b> (20,102 ft / 6127 m) as we pass
+                                over several ridges around 16,000 ft / 5000 meters and continue to enjoy panoramic views
+                                of the <b>Cordillera Real</b> . We will camp in the valley below the western slopes of
+                                <b>Chearoco</b> .
+                                Overnight in tents in <b>Kelluani Valley</b> (15,200 ft / 4635 m). <br>
+
+                                Trekking time with breaks: 6 hrs. <br>
+
+                                Distance: 4.5 miles. <br>
+
+                                Elevation Gain: 1700 ft.<br>
+                                <hr>
+                                Trek over a pass in the ridges that separate the valleys below the peaks
+                                of <b>Chearoco and Chachacomani</b> (19,915 ft / 6070 m). Conditions permitting, we
+                                will also make an ascent of the trekking peak <b>Chachatuju</b> (17,552 ft / 5350 m).
+                                Overnight
+                                in tents at base camp of <b>Chachacomani</b> (14,630 ft / 4460 m). <br>
+
+                                Trekking time with breaks: 7 hrs. <br>
+
+                                Distance: 5.5 miles. <br>
+
+                                Elevation Gain: 2350 ft.<br>
+                                <hr>
+                                Continue up the valley towards the mountains and over a pass of around 16,535 ft
+                                / 5040 m with expansive views of <b>Chachacomani</b>. From the pass, we descend into the
+                                <b>Jaillahuaya</b>
+                                valley and curve around to a platform that forms the entrance to a higher
+                                valley below the peak of <b>Warawarani</b>. <br>
+
+                                Overnight in tents at Jaillahuaya Valley (15,090 ft / 4600 m). <br>
+
+                                Trekking time with breaks: 7 hrs. <br>
+
+                                Distance: 6.5 miles. <br>
+
+                                Elevation Gain: 2100 ft. <br>
+                                <hr>
+                                Take to <b>Warawarani</b>(18,182 ft / 5542 m), which means
+                                “the place of the stars” in the indigenous <b>Aymara language</b>. We climb from the
+                                lake to a
+                                pass of 16,500 ft / 5030 m and down into the next valley before climbing a final pass
+                                and descending to the large blue <b>Khotia Lake</b>. Our driver will meet us at Khotia
+                                Lake for
+                                the return trip to <b>La Paz</b>. Overnight at hotel in <b>La Paz</b>(11,810 ft / 3600
+                                m). <br>
+
+                                Trekking time with breaks: 6 hrs. <br>
+
+                                Distance: 7 miles. <br>
+
+                                Elevation Gain: 2200 ft. <br>
+                            </p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="bi bi-check2"></i>
+                                <h4>Day 14</h4>
+                            </div>
+                            <div>
+                                <p>
+                                    <b>
+                                        Depart La Paz.
+                                    </b>
+                                </p>
+                            </div>
+                        </div><!-- End Tab 2 Content -->
+                        <div class="tab-pane fade show" id="tab3">
+                            <p class="fst-italic">This trek is led by <a
+                                    href="https://www.alpineascents.com/guides/rachel-molstad/"><b>Rachel
+                                        Molstad</b></a> a Bolivia expert who lives in the
+                                region and leads all our Bolivian treks and climbs</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="bi bi-check2"></i>
+                                <h4>CYBERCASTS</h4>
+                            </div>
+                            <p>Alpine Ascents provides family and friends the opportunity to follow our climbs as they
+                                proceed. Utilizing state-of-the-art technology, we receive regular audio dispatches from
+                                the climbers and post them on our website.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="bi bi-check2"></i>
+                                <h4>OUR GUIDING TEAM</h4>
+                            </div>
+                            <p>Part of Alpine Ascents’ success is based on our small and select group of experienced
+                                guides.</p>
+                            <div class="d-flex align-items-center mt-4">
+                                <i class="bi bi-check2"></i>
+                                <h4>GEAR DEPARTMENT</h4>
+                            </div>
+                            <p>Alpine Ascents has a full gear department ready to assist with your climbing questions
+                                and preparations. We have a full-time gear staff and a retail store. </p>
+                        </div><!-- End Tab 3 Content -->
+                        <div class="tab-pane fade show" id="tab4">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15261.9289803516!2d-67.17542148594657!3d-16.999999512987745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e212159345e9d3%3A0x41a309cf5bf1af30!2sCordillera%20Real!5e0!3m2!1svi!2s!4v1659122828197!5m2!1svi!2s"
+                                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+    <hr>
+    <footer>
+        <div class="row">
+            <div class="col-md-6">
+                <p>FPT Nhóm 2 &copy; project ver 1</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+
+
+                <a href="https://www.facebook.com/AlpineAscentsInternational" class="text-decoration-none"
+                    target="_blank" title="Like us on Facebook">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                        </path>
+                    </svg>
+                </a>
+                <span class="text-muted mx-2">|</span>
+                <a href="https://www.youtube.com/channel/UC8QN14o4g6bOGZQbHAoF9og" class="text-decoration-none"
+                    target="_blank" title="Subcribe">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path
+                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z">
+                        </path>
+                    </svg>
+                </a>
+                <span class="text-muted mx-2">|</span>
+                <a href="https://www.instagram.com/alpineascents/" class="text-decoration-none" target="_blank"
+                    title="Follow Us on Instagram">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+
+    </footer>
+    <script type="text/javascript" src="/popup/popup.js"></script>
+</body>
+
+</html>

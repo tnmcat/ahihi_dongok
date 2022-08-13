@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button:hover{
+  font-weight: bolder;
+}
+a:hover{
+  font-weight: bolder;
+}
+.cardBackground{
+  background-color: rgb(243, 243, 243);
+  transition: all .1s ease-in-out; 
+  border-radius: 10px;
+}
+.cardBackground:hover{
+  background-color: rgb(250, 250, 250);
+  transform: scale(1.07); 
+}
+.row>*{
+  padding-right: calc(var(--bs-gutter-x) * .1);
+  padding-left: calc(var(--bs-gutter-x) * .1);
+}
+a{
+  text-decoration: none;
+}
+
+
+/* Mega Menu header, if needed */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+.dropdownnnnn {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdownnnnn .dropbtnnnnnn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(65, 44, 65);
+  padding: 10px 10px;
+  background-color: inherit;
+  font: inherit;
+ 
+}
+
+.navbar a:hover, .dropdownnnnn:hover .dropbtnnnnnn {
+  background-color: rgb(231, 231, 231);
+}
+
+.dropdown-contenttttt {
+  display: none;
+  position:absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  height:400px;
+}
+
+.dropdown-contenttttt .header {
+  background: red;
+  padding: 16px;
+  color: white;
+}
+
+.dropdownnnnn:hover .dropdown-contenttttt {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: white;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  opacity: 50%;
+}
+
+.column a:hover {
+  background-color: #ddd;
+  opacity: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.image{
+padding-left:20px;
+padding-bottom: 50px;
+}
+.imageNext{
+  margin-left:50px;
+  
+}
+.letter{
+  text-align: center;
+
+}
+.letter:hover{
+ 
+  color:rgb(85, 190, 206);
+}
+.Discover{
+  font-size: 18px;
+ text-align: center;
+ margin-left:1030px;
+}
+.Dicover:hover{
+  color:rgb(85, 190, 206);
+}
+
+
+
