@@ -1,0 +1,31 @@
+{
+    "country": [
+      {
+        "trek": "Bhutan Laya",
+        "price": "$8,7000.00",
+        "img": "Bhutan.jpg"
+        
+      },
+      {
+        "trek": "Bolivia’s Cordillera",
+        "price": "$4,5000.00",
+        "img": "Bolivia Cordillera Real.jpg"
+      },
+      {
+        "trek": "Everest Basecamp",
+        "price": "6,800.00",
+        "img": "Everest Basecamp.jpg"
+      },
+      {
+        "trek": "Kanchenjunga",
+        "price": "5,300.00",
+        "img": "Kanchenjunga.jpg"
+      },
+      {
+        "trek": "Ladakh Region",
+        "price": "5,300.00",
+        "img": " Ladakh Region Nubra Valley.jpg"
+      }
+    ]
+  }
+  

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <title>CRUD</title>
+
+    <script src="indexController.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container-fulid" ng-app="myApp" ng-controller="myCtrl">
+
+    <header>
+        <div align="right">
+            <input ng-model="txtSearch" placeholder="&#x1F50E;&#xFE0E;Enter your search">
+
+    </header>
+
+    <section>
+        <form name="frmReg">
+            <table>
+                <tr>
+                    <td>Trek:</td>
+                    <td colspan="4"><input name="trek" type="text" ng-model="country.code" required></td>
+                    <td colspan="4"><input class="right" type="button" value="Save" ng-disabled="btnSave" ng-click="Add()"></td>
+                    <td colspan="4"><input class="right" type="button" value="Delete" ng-disabled="btnDelete" ng-click="Delete(data)"></td>
+                </tr>
+
+            </table>
+        </form>
+        <table class="table table-hover">
+            <tr>
+                <th><button ng-click="doSort('trek)">Trek</button></th>
+                <th><button ng-click="doSort('price')">Price</button></th>
+                <th><button ng-click="doSort('image')">Image</button></th>
+                
+            </tr>
+            <tr ng-repeat="data in countriesList | filter : txtSearch | orderBy: sort.cot : sort.descending"
+                ng-click="getRecord(data)">
+                <td>{{ data.trek }}</td>
+                <td>{{ data.price }}</td>
+                <td><img src="{{ data.img }}" width="200"></td>
+            
+            <td>
+                <a  href="#">Delete</a>
+            </td>
+            <td>
+                <a  href="#">Edit</a>
+            </td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2022 By Alpine Ascent _ Group02_Eproject02. All rights Reserved</p>
+    </footer>
+
+</body>
+</html>

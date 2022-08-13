@@ -1,0 +1,68 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+
+.myNav {
+    width: 100%;
+    overflow: auto;
+    border-top: 2px double gray;
+    border-bottom: 2px double gray;
+}
+
+.myNav a {
+    width: 20%;
+    float: left;
+    text-align: center;
+    padding: 10px 1px;
+}
+
+.myNav a :hover {
+    background-color: aqua;
+}
+
+form {
+    width: 1px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 34.5%;
+    width: 500px;
+}
+
+tr th {
+    background-color: #F1F6F8;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 50;
+}
+
+tr th button {
+    background-color: #F1F6F8;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40;
+    border: none;
+}
+
+tr td {
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+
+.right {
+    margin-left: 70%;
+}
+
+footer p {
+    text-align: center;
+    background-color: #F1F6F8;
+    font-size: 2em;
+}
+
+.error{
+    color: red;
+    font-size: 10px;
+}
